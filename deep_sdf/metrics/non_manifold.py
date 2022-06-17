@@ -24,7 +24,7 @@ def calculate_manifoldness(gen_mesh):
     nm_vertices, nm_edges = calculate_non_manifold_edge_vertex(gen_mesh)
     nv, ne, nf, nm_faces, mesh_isect = calculate_non_manifold_face_intersection(gen_mesh)
     
-    return nm_vertices/nv, nm_edges/ne, nm_faces/nf, mesh_isect/nf
+    return {'NM-V': nm_vertices/nv, 'NM-E': nm_edges/ne, 'NM-F': nm_faces/nf, 'self-intersection': mesh_isect/nf}
 
 
 def calculate_non_manifold_edge_vertex(gen_mesh):
@@ -63,7 +63,9 @@ def calculate_non_manifold_face_intersection(gen_mesh):
 
     count=0
     for f in range(f_adj.shape[0]):
+        # if fn[f_adj[f,0]]@fn[f_adj[f,1]] < -0.8:
         if fn[f_adj[f,0]]@fn[f_adj[f,1]] < 0:
+            #TODO: hotfix
             count+=1
         
     vertices = torch.tensor(gen_mesh.vertices,

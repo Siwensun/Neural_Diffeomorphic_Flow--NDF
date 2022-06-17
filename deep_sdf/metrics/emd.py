@@ -9,7 +9,7 @@ import trimesh.sample
 from scipy.optimize import linear_sum_assignment
 
 
-def compute_trimesh_emd(gt_points, gen_mesh, offset, scale, num_mesh_samples=500):
+def compute_trimesh_emd(gt_points, gen_mesh, offset, scale, num_mesh_samples=5000):
     """
     gt_points: trimesh.points.PointCloud of just poins, sampled from the surface (see
                compute_metrics.ply for more documentation)
@@ -35,4 +35,4 @@ def compute_trimesh_emd(gt_points, gen_mesh, offset, scale, num_mesh_samples=500
     assignment = linear_sum_assignment(dist)
     emd = dist[assignment].sum() / num_mesh_samples
 
-    return emd
+    return {'earthmover_distance': emd}

@@ -36,4 +36,4 @@ def compute_trimesh_chamfer(gt_points, gen_mesh, offset, scale, num_mesh_samples
     two_distances, two_vertex_ids = gt_points_kd_tree.query(gen_points_sampled)
     gen_to_gt_chamfer = np.mean(np.square(two_distances))
 
-    return gt_to_gen_chamfer + gen_to_gt_chamfer
+    return {'chamfer_distance': gt_to_gen_chamfer + gen_to_gt_chamfer}
