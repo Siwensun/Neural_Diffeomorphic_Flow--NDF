@@ -473,7 +473,7 @@ if __name__ == "__main__":
 
     import argparse
 
-    arg_parser = argparse.ArgumentParser(description="Train a DeepSDF autodecoder")
+    arg_parser = argparse.ArgumentParser(description="Train a NDF autodecoder")
     arg_parser.add_argument(
         "--experiment",
         "-e",

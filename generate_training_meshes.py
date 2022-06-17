@@ -131,7 +131,7 @@ def code_to_mesh(experiment_directory, checkpoint, start_id, end_id,
 if __name__ == "__main__":
 
     arg_parser = argparse.ArgumentParser(
-        description="Use a trained DeepSDF decoder to generate a mesh given a latent code."
+        description="Use a trained NDF decoder to generate a mesh given a latent code."
     )
     arg_parser.add_argument(
         "--experiment",
