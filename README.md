@@ -10,7 +10,7 @@ Full paper is available [here](https://arxiv.org/abs/2203.08652).
 - apply minor laplacian smoothing
 - sample points with sdf values as [DeepSDF](https://github.com/facebookresearch/DeepSDF) suggests
 
-The preprocesed data is [here](https://drive.google.com/drive/folders/1BPieIi_nFx6MRsqHqCdnm-uEIa5TUW5J?usp=sharing), including four datasets used in the paper -- Pancreas CT, MMWHS, inhouse liver and inhouse lung. Download them to your local path and this is will be the "Data Source" in the following steps.
+The preprocesed data is [here](https://drive.google.com/drive/folders/1BPieIi_nFx6MRsqHqCdnm-uEIa5TUW5J?usp=sharing), including four datasets used in the paper -- Pancreas CT, MMWHS, Liver and Lung. Download them to your local path and this is will be the "Data Source" in the following steps.
 
 ## **Installation**
 
